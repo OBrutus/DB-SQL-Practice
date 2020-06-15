@@ -1,0 +1,42 @@
+#SELECT
+***** questions ******
+Q> list cities whose population is less than 500000
+Q> list top 5 populated cities
+Q> list top 5 cities which start with letter new and sorted as per zone
+Q> list all cities which has letter x in the Name
+Q> list cities exactly with 3 words
+Q> list all cities lying in Texas, Arizona, Nevada
+
+***** warm up ******
+SELECT <COL1>, <COL2> FROM <TABLE>
+SELECT * FROM <TABLE>
+SELECT <COL1> AS <ALIAS NAME FOR COL1>, <COL2> AS <ALIAS Name FOR COL2>  FROM <TABLE>
+SELECT * FROM <TABLE> ORDER BY <COL2>
+SELECT * FROM <TABLE> ORDER BY <COL2> DESC
+SELECT * FROM <TABLE> ORDER BY <COL2> DESC LIMIT 2
+
+****** for further refer the city.sql file *****
+SELECT * FROM City WHERE Population <= 500000;
+SELECT * FROM City ORDER BY Population DESC LIMIT 5;
+SELECT * FROM City WHERE Name LIKE "New%" ORDER BY ZONE LIMIT 5;
+SELECT * FROM City WHERE Name LIKE "%x%";
+SELECT * FROM City WHERE Name LIKE "___"; -- IT HAS 3 UNDERSCORES FOR 3 POSITON WILDCARD MATCH
+SELECT * FROM City WHERE Zone IN ('Texas', 'Arizona', 'Nevada'); -- AND FOR NOT INCLUDEING USE : NOT IN ( ... )
+SELECT * FROM City WHERE Name REGXP '<A REGX STRING>'
+
+INSERT INTO <TABLE> (<COL1>, <COL2>)
+VALUES 
+(V11, V12),
+(V21, V22),
+(V31, V32);
+
+#Q> COPY CONTENTS OF ONE TABLE TO OTHER
+INSERT INTO STUDENT_COPY SELECT * FROM STUDENT_ORIGNAL;
+
+
+# UPDATE
+UPADTE <TABLE> SET <COL>=<GIVEN-VALUE> WHERE < A SPECIFIC CONDITION >
+
+# DELETE
+DELETE FROM <TABLE> WHERE < A SPECIFIC CONDITION >
+

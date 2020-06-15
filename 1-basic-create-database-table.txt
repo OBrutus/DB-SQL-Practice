@@ -1,0 +1,38 @@
+## DATABASE
+CREATE DATABASE <dbname>;
+CREATE DATABASE IF NOT EXISTS <dbname> DEFAULT CHARSET = utf8;
+
+-- import database from .sql file: 
+sudo mysql < stmts.sql
+
+SHOW DATABASES;
+
+DROP DATABASE <dbname>;
+
+USE <dbname>
+
+## TABLE
+CREATE TABLE <table1>(
+<c1> <type c1>, 
+<c2> <type c2>);
+
+DESCRIBE <table1>;
+
+SHOW CREATE TABLE <table1>;
+
+ALTER TABLE <table1> ADD COLUMN <c3> <type c3> ;
+ALTER TABLE <table1> MODIFY <c3> <type c3> ;
+ALTER TABLE <table1> DROP COLUMN <c3>;
+
+RENAME TABLE <t1> TO <t2>;
+
+DROP TABLE <t1>;
+
+
+
+
+
+
+
+
+

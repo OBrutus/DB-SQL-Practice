@@ -1,0 +1,9 @@
+## constraints
+
+UNIQUE
+NOT NULL
+PRIMARY KEY
+FOREIGN KEY
+
+## Misc
+AUTO_INCREMENT

@@ -1,0 +1,79 @@
+# STRING 
+***** USE world ******
+LENGTH, CHAR_LENGTH : NO. OF CHARACTERS
+BIT_LENGTH : NO. OF BITS IT HAS 
+
+Q> list names of cities as per their normal length and bit length
+Q> list yes for city if they have length of name > 7 otherwise no
+Q> list the concat of name and zone in a single column
+Q> find out the location of string 'new' in given names of city
+Q> list reversed names of Citiesf 
+Q> list all cities lying in Texas, Arizona, Nevada
+
+SELECT name, LENGTH(name) AS normal_len, BIT_LENGTH(name) AS bit_length FROM City ORDER BY name_length DESC;
+SELECT name, IF( LENGTH(name)>7, 'yes', 'no' ) AS result FROM City;
+SELECT CONCAT(name, '-->', zone) AS Concat-Result FROM City;
+SELECT name, LOCATE('new', name) FROM City WHERE name LIKE '%new%';
+SELECT name, REVERSE(name) FROM City;
+
+
+# ARITHMATIC
+
+***
+WE CAN DO BASIC ARITMETIC USING QUERY
+	SELECT 10+2, 10/5, 4*5, 6-2;   -- NOTE THE DIVISION RESULTS FLOATING NUMBER
+FOR INTEGER DIVISION : 
+	SELECT 10 DIV 2;
+MODULUS CAN BE OBTAINED: 
+	SELECT 4 MOD 3;
+POWER:
+	POW(base, exp)
+ROUND OF:
+	ROUND(floating number), ROUND(floating number, required precision)
+	
+	FLOOR(floating number)
+	CEILING(floating number)
+	PI()
+	ABS( NUM )
+	RAND()  -- RANDOM NUM BET 0 AND 1
+	
+	
+# AGREEGATE FUNCTION 
+COUNT(*)
+GROUP BY CLAUSE IS USED WITH AGGREGATE FUNCTION AS:
+SELECT ZONE, COUNT(*) FROM CITY GROUP BY ZONE; 
+/**
+ TAKIN ZONE INTO CONSIDERATION IT WILL CREATE GROUP(S) AND COUNT 
+ IF WE USED NAME INSTADE OF ZONE IT WILL PROVIDE TOP NAME FROM THE PARTICULAR ZONE AND WILL DISPLAY IT
+ */
+AVG()
+SUM()
+MIN()
+MAX()
+
+Q> list in a row all the cities presnt in all the zone seperate using ' <><> ' symbol
+
+SELECT  GROUP_CONCAT(name) FROM City;
+SELECT  GROUP_CONCAT(name seperator ' <><> ') FROM City;
+
+
+
+
+# DATE AND TIME
+
+Q> DISPLAY CURRENT TIME
+
+SELECT NOW(); -- OR USE >> SELECT CURRNT_TIMESTAMP(); OR  >> SELECT UNIX_TIMESTAMP();1970
+>>CURDATE()
+CURTIME()
+DAYNAME(date)
+DAYOFMONTH(date)
+DAYOFWEEK(date)
+DAYOFYEAR(date)
+MONTHNAME(date)
+TIME_TO_SEC(time)	-- parametr format hh:mm:ss
+SEC_TO_TIME(num_sec)	-- parameter is just number of seconds
+ADDTIME(time1, time2)	--
+SUBTIME(time1, time2)	--
+ADDDATE(date, INTERVAL 60 DAY) 
+

@@ -1,0 +1,53 @@
+## STRING
+
+CHAR(size)		:fixed len
+VARCHAR(size)	:variable len
+
+BINARY(size)	:fixed binary string
+VARBINARY(size)	:variable binary string
+
+TINY TEXT
+TEXT(size)
+LONG TEXT
+
+TINY BLOB
+BLOB(size)
+LONG BLOB
+
+ENUM(val1, val2, val3, ...)	: A string object that can have only one value, chosen from a list of possible values
+SET(val1, val2, val3, ...)	: A string object that can have 0 or more values, chosen from a list of possible values.
+
+
+
+## NUMERIC
+
+BIT(size)		:size number of bits
+
+TINYINT(size)	
+SMALLINT(size)
+MEDIUMINT(size)
+INT(size)
+INTEGER(size)	:same as INT
+BIGINT(size)
+
+BOOL			
+BOOLEAN			:same as BOOL
+
+FLOAT(size, d)	:d is number of digits after decimal
+FLOAT(p)		:If p is from 25 to 53, the data type becomes DOUBLE if lower then FLOAT
+
+DOUBLE(size, d)	
+DOUBLE PRECISION(size, d)
+
+DECIMAL(size, d)
+DEC(size, d)
+
+
+## DATE
+
+DATE
+DATETIME(fsp)
+TIMESTAMP(fsp)
+TIME(fsp)
+YEAR
+
